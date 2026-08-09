@@ -6,7 +6,7 @@
 
 
 
-Introduction
+**Introduction**
 
 Retail businesses generate enormous amounts of data every day. Sales transactions, customer demographics, shopping patterns, time of purchase, and location all provide valuable information that can help businesses understand and predict sales.
 But turning this raw data into useful predictions is not straightforward.
@@ -15,7 +15,7 @@ The goal was simple:
 Can machine learning learn the relationship between customer behavior, transaction patterns, commercial areas, and sales activity well enough to predict monthly retail sales?
 To answer this question, I followed an end-to-end data science workflow involving data exploration, preprocessing, feature scaling, dimensionality reduction, machine learning, and model evaluation.
 ________________________________________
-Understanding the Dataset
+**Understanding the Dataset**
 
 The dataset contains 85,732 records and 55 columns.
 It includes information about South Korean commercial areas and different service industries. The data contains sales-related information along with customer and transaction characteristics.
@@ -40,7 +40,7 @@ Some of the major categories of information include:
 
 The original dataset was in Korean, so I worked with the data while translating the relevant fields into English for easier analysis and interpretation.
 ________________________________________
-Defining the Machine Learning Problem
+**Defining the Machine Learning Problem**
 
 This project is a supervised machine learning regression problem.
 The target variable is:
@@ -54,7 +54,7 @@ This makes the problem different from classification.
 We are not trying to predict a category such as “high sales” or “low sales.”
 Instead, we are trying to predict an actual numerical sales amount.
 ________________________________________
-Data Quality Analysis
+**Data Quality Analysis**
 Before building a machine learning model, I first examined the quality of the dataset.
 The dataset contained 85,732 observations and 55 variables.
 I also checked the dataset for missing values and duplicate records.
@@ -67,7 +67,7 @@ This provided a clean starting point for the modeling process.
 
 However, clean data does not automatically mean that the data is ready for machine learning. Feature types, scale, dimensionality, and relationships between variables still need to be considered.
 ________________________________________
-Exploratory Data Analysis
+**Exploratory Data Analysis**
 The next step was exploratory data analysis.
 
 The purpose of EDA was to understand the structure of the dataset and identify relationships between the target variable and other numerical features.
@@ -85,7 +85,7 @@ Sales are influenced by multiple dimensions of customer and transaction behavior
 
 Instead of looking at sales as a single number, the dataset allows us to examine sales through different perspectives such as time, demographics, and commercial activity.
 ________________________________________
-Preparing the Data for Machine Learning
+**Preparing the Data for Machine Learning**
 
 After understanding the data, the next stage was preparing it for the machine learning model.
 
@@ -101,7 +101,7 @@ A model should not simply perform well on the data it has already seen.
 The real question is:
 How well does it perform on data it has never seen before?
 ________________________________________
-Feature Scaling
+**Feature Scaling**
 The numerical features were scaled using RobustScaler.
 
 This preprocessing technique was selected to make the feature values more comparable while being less sensitive to extreme observations.
@@ -113,7 +113,7 @@ For example, sales amounts can be extremely large compared with transaction coun
 Scaling helps create a more consistent numerical representation before applying dimensionality reduction.
 
 ________________________________________
-Reducing Dimensionality with PCA
+**Reducing Dimensionality with PCA**
 
 After scaling the features, I applied Principal Component Analysis (PCA).
 
@@ -129,7 +129,7 @@ This was an interesting result.
 
 Even though the original dataset contained many numerical variables, a large proportion of the variation could be represented using just two principal components.
 ________________________________________
-Building the Random Forest Model
+**Building the Random Forest Model**
 
 For the prediction task, I selected Random Forest Regression.
 
@@ -139,7 +139,7 @@ It is particularly useful for tabular datasets because it can capture nonlinear 
 
 In this project, the Random Forest model was trained using the PCA-transformed features.
 
-Model Performance
+**Model Performance**
 
 After training the model, I evaluated it on both the training and testing datasets.
 
@@ -156,7 +156,7 @@ Several regression metrics were used:
 
 Using multiple metrics provides a more complete picture of model performance.
 ________________________________________
-Training Performance
+**Training Performance**
 
 The Random Forest model achieved an R² score of approximately 0.9936 on the training dataset.
 
@@ -175,7 +175,7 @@ MAPE	16.79%
 
 These results indicate that the model fitted the training data very strongly.
 ________________________________________
-Testing Performance
+**Testing Performance**
 
 The more important result is how the model performed on unseen data.
 
@@ -195,7 +195,7 @@ MAPE	40.02%
 
 The test R² of 0.9720 indicates that the model captured a large proportion of the variation in monthly sales on the unseen test data.
 ________________________________________
-What Do These Results Tell Us?
+**What Do These Results Tell Us?**
 
 At first glance, the R² score of 0.9720 looks extremely strong.
 
@@ -217,7 +217,7 @@ The training R² was approximately 99.36%, while the testing R² was approximate
 
 The decrease indicates that the model performs somewhat better on the data used for training than on unseen data, which is something that should always be examined when evaluating machine learning models.
 ________________________________________
-Why Random Forest?
+**Why Random Forest?**
 
 Random Forest was a suitable choice for this project because the dataset contains many interacting numerical variables.
 
@@ -241,7 +241,7 @@ Sales can be associated with:
 
 A tree-based ensemble model can capture complex relationships between these variables without requiring the relationships to be strictly linear.
 ________________________________________
-What I Learned from This Project
+**What I Learned from This Project**
 
 This project reinforced several important lessons about practical data science.
 
@@ -260,7 +260,7 @@ A model’s ability to generalize to unseen data is one of the most important in
 
 
 ________________________________________
-Business Perspective
+**Business Perspective**
 
 A machine learning model for sales prediction can potentially provide value to businesses by helping them understand and estimate sales patterns.
 Such predictive systems could support areas such as:
@@ -280,7 +280,8 @@ Such predictive systems could support areas such as:
 However, before deploying a model in a real business environment, additional validation would be necessary.
 The model would need to be tested on future data, monitored over time, and evaluated against business requirements.
 ________________________________________
-Final Thoughts
+**Final Thoughts**
+
 This project was more than simply training a Random Forest model.
 
 It was an opportunity to work through a complete machine learning workflow using real-world South Korean commercial data.
