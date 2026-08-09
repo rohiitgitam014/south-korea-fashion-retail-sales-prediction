@@ -1,6 +1,7 @@
 # South Korea Fashion Retail Sales Prediction Using Random Forest
 
-![Uploading ChatGPT Image Aug 9, 2026, 02_51_38 PM.png…]()
+<img width="1536" height="1024" alt="ChatGPT Image Aug 9, 2026, 02_51_38 PM" src="https://github.com/user-attachments/assets/4454d80a-8737-4059-933b-396059f1eb7d" />
+
 
 
 
