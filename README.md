@@ -4,6 +4,7 @@
 
 
 
+
 Introduction
 
 Retail businesses generate enormous amounts of data every day. Sales transactions, customer demographics, shopping patterns, time of purchase, and location all provide valuable information that can help businesses understand and predict sales.
