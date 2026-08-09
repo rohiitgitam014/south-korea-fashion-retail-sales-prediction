@@ -55,6 +55,7 @@ We are not trying to predict a category such as “high sales” or “low sales
 Instead, we are trying to predict an actual numerical sales amount.
 ________________________________________
 **Data Quality Analysis**
+
 Before building a machine learning model, I first examined the quality of the dataset.
 The dataset contained 85,732 observations and 55 variables.
 I also checked the dataset for missing values and duplicate records.
@@ -68,6 +69,7 @@ This provided a clean starting point for the modeling process.
 However, clean data does not automatically mean that the data is ready for machine learning. Feature types, scale, dimensionality, and relationships between variables still need to be considered.
 ________________________________________
 **Exploratory Data Analysis**
+
 The next step was exploratory data analysis.
 
 The purpose of EDA was to understand the structure of the dataset and identify relationships between the target variable and other numerical features.
@@ -102,6 +104,7 @@ The real question is:
 How well does it perform on data it has never seen before?
 ________________________________________
 **Feature Scaling**
+
 The numerical features were scaled using RobustScaler.
 
 This preprocessing technique was selected to make the feature values more comparable while being less sensitive to extreme observations.
